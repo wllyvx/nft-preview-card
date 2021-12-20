@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+              'softblue': '#8bacda',
+              'cyan': '#00fff7',
+              'main-bg': '#0d192b',
+              'card-bg': '#14253d',
+              'line': '	#2f415b',
+          },
+          fontFamily: {
+              outfit: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+</head>
+<body class="bg-main-bg text-white font-outfit">
+  <main class="flex justify-center items-center mx-auto min-h-screen">
+    <div id="card-container" class="w-96 p-8 rounded-[20px] bg-card-bg flex flex-col justify-center items-center drop-shadow-2xl">
+      <div class="w-full rounded-lg bg-contain bg-[url('/images/image-equilibrium.jpg')]">
+        <div class="w-full h-80 bg-cyan opacity-0 hover:opacity-70 transition duration-300 ease-in-out cursor-pointer rounded-lg">
+          <div class="flex justify-center items-center h-full">
+            <img src="./images/icon-view.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="mt-5">
+          <h1 class="text-2xl font-semibold cursor-pointer hover:text-cyan transition duration-300 ease-in-out">Equilibrium #3429</h1>
+        </div>
+        <div class="mt-5">
+          <p class="text-softblue text-xl font-light">Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="mt-5 flex justify-between">
+          <div class="flex items-center">
+            <img src="./images/icon-ethereum.svg" alt="" class="mr-2">
+            <p class="text-cyan font-semibold">0.041 ETH</p>
+          </div>
+          <div class="flex items-center">
+            <img src="./images/icon-clock.svg" alt="" class="mr-2">
+            <p class="text-softblue">3 days left</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-start w-full border-t-[1px] border-line mt-5">
+        <div class="flex items-center mt-5 gap-x-4">
+          <div class="w-10 h-10">
+            <img src="./images/image-avatar.png" alt="" class="rounded-full border-white border-[1px]">
+          </div>
+          <div>
+            <p class="text-softblue">Creation of <span class="text-white hover:text-cyan cursor-pointer transition duration-300 ease-in-out">Jules Wyvern</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="font-light attribution w-full flex flex-col justify-center items-center">
+    <div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="font-semibold text-cyan">Frontend Mentor</a>.
+    </div> 
+    <div>
+      Coded by <a href="https://github.com/wllyvx" target="_blank" class="font-semibold text-cyan">Willy Fajar Ramadhan</a>.
+    </div>
+  </div>
+</body>
+</html>
